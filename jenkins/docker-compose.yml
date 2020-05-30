@@ -8,8 +8,8 @@ services:
       - "/var/run/docker.sock:/var/run/docker.sock"
       - "/etc/localtime:/etc/localtime:ro"
     ports:
-      - 8089:8080
-      - 50009:50000
+      - 8080:8080
+      - 50000:50000
 volumes:
   jenkins:
 
