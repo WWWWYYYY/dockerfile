@@ -1,0 +1,17 @@
+version: '3'
+services:
+  jenkins:
+    image: registry.cn-shenzhen.aliyuncs.com/wyrancher/jenkins-maven/jenkins:latest
+    volumes:
+      - "jenkins:/var/jenkins_home"
+      - "/usr/lib64/libltdl.so.7:/usr/lib/x86_64-linux-gnu/libltdl.so.7"
+      - "/var/run/docker.sock:/var/run/docker.sock"
+      - "/etc/localtime:/etc/localtime:ro"
+    ports:
+      - 8089:8080
+      - 50009:50000
+volumes:
+  jenkins:
+
+
+
